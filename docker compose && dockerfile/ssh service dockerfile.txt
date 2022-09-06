@@ -1,0 +1,9 @@
+[root@master docker]# cat dockerfile
+FROM ubuntu:20.04
+ENV  NAME amit
+ENV  PASS password123
+RUN mkdir -p /var/run/sshd
+RUN apt-get update -y && apt-get install  -y openssh-server
+RUN useradd -d /home/amit -g root -G sudo -m -p $(echo "$PASS" | openssl passwd -1 -stdin) $NAME
+EXPOSE 22 80
+CMD ["/usr/sbin/sshd", "-D"]

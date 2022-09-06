@@ -1,0 +1,4 @@
+docker service create -d  --constraint="node.labels.sata==true" --replicas=4 nginx:latest
+docker service create -d --constraint="node.role==manager" --replicas 5 httpd:alpine
+docker service create -d --constraint="node.role==worker" --replicas 5 httpd:alpine
+docker service create -d  --constraint="engine.labels.name==amit" --replicas=4 nginx:latest

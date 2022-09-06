@@ -1,0 +1,45 @@
+//
+version: '3'
+services:
+        webap:
+                build: .
+                image: akkisain/nginx
+                ports:
+                        - "8030:80"
+
+                volumes:
+                        - ./:/usr/share/nginx/html
+                networks:
+                       - test
+
+networks:
+       test:
+
+
+
+
+
+//
+version: '3'
+services:
+        webapp:
+                image: nginx
+                ports:
+                        - "8030:80"
+
+                volumes:
+                        - ./:/usr/share/nginx/html
+
+
+
+//
+
+  [root@master ~]# cat docker-compose.yaml
+version: '3.3'
+services:
+  webdemo:
+    image: httpd:alpine
+    ports:
+      - "9010:80"
+    volumes:
+      - /home/amit/:/usr/local/apache2/htdocs

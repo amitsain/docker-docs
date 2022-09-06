@@ -1,0 +1,21 @@
+## https://github.com/coolgourav147/hello-world-angular
+[root@jenkins-master hello-world-angular]# cat Dockerfile
+#step 1
+FROM node:14.2.0 as builder
+LABEL project="angular-pro"
+LABEL owner="vishant"
+RUN npm install -g @angular/cli
+RUN mkdir /code
+ADD ./package.json /code
+ADD ./package-lock.json /code
+WORKDIR /code
+RUN npm install
+ADD . /code
+RUN npm run build
+#EXPOSE 4200
+#CMD ["ng","serve","--host","0.0.0.0"]
+
+# Step 2
+FROM nginx:latest
+copy --from=builder /code/dist/hello-world-angular /usr/share/nginx/html
+[root@jenkins-master hello-world-angular]#

@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  webdemo:
+    build: .
+    ports:
+      - "9010:80"
+    image: mywebdemo
+    environment:
+      - name=amit
+    networks:
+      -  appnetwork
+
+networks:
+  appnetwork:

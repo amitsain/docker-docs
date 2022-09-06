@@ -1,0 +1,8 @@
+FROM ubuntu:16.04
+ENV NAME amit
+ENV  PASS passwordi
+RUN apt-get update -y   &&  apt-get install -y python-software-properties aptitude screen htop nano nmap nginx  &&  apt-get install openssh-server -y
+RUN mkdir -p /var/run/sshd
+RUN useradd -d /home/amit -g root -G sudo -m -p $(echo "$PASS" | openssl passwd -1 -stdin)  $NAME
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
