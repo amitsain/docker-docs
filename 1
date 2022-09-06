@@ -1,0 +1,7 @@
+FROM ubuntu:14.04
+label name="amitsain"
+label email="p.amitsain@gmail.com"
+run apt-get update -y  && apt-get install apache2 -y 
+copy index.html /usr/local/apache2/htdocs/
+cmd  ["/usr/sbin/apache2", "-D"]
+

@@ -1,0 +1,6 @@
+[root@jenkins-master ~]# cat /etc/docker/daemon.json
+{
+    "default-address-pools":
+  [{"base":"10.0.0.0/16","size":24}]
+}
+

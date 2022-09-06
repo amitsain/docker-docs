@@ -1,0 +1,7 @@
+cd /etc/docker
+cat daemon.json
+{
+   "insecure_registries" : ["ip:port"] 
+}
+
+# docker image tag imagename registryserver:port/imagename

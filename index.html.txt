@@ -1,0 +1,65 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+width: 300px;
+margin: auto;
+text-align: center;
+font-family: arial;
+}
+.card img{
+  width: 100%;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+<title>Amit Sain</title>
+</head>
+<body>
+
+<h2 style="text-align:center">User Profile Card-v1</h2>
+
+<div class="card">
+  <img src="https://media-exp1.licdn.com/dms/image/C5603AQHrhbY03cOwJg/profile-displayphoto-shrink_200_200/0/1615100855877?e=1663804800&v=beta&t=tSoCjKxpUNTBbzIDwVX4Oca6a2cPLYPxW8u6JoPcUMc">
+  <h1>Amit Sain</h1>
+  <p class="title">Learner DevOps</p>
+  <p>Rajasthan</p>
+  <div style="margin: 24px 0;">
+    <a href="https://www.linkedin.com/in/amit-sain/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <a href="https://www.facebook.com/P.AkkiSain" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.youtube.com/channel/UC2XTlpN8KFvxpWxHDhzftyg" target="_blank"><i class="fa fa-youtube"></i></a>
+    <a href="skype:technical_1311?chat" target="_blank"><i class="fa fa-skype"></i></a>
+  </div>
+  <p><button>Contact</button></p>
+</div>
+
+</body>
+</html>

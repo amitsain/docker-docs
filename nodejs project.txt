@@ -1,0 +1,13 @@
+-----------------------
+FROM node:14.2.0
+RUN npm install -g @angular/cli
+RUN mkdir /code
+WORKDIR /code
+ADD  package.json /code
+ADD  package-lock.json /code
+Run npm install
+ADD .  /code
+EXPOSE 8000
+CMD ["ng", "serve", "--host", "91.193.16.197"]
+
+------------------

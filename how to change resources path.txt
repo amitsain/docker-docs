@@ -1,0 +1,5 @@
+[root@jenkins-master data]# cat /etc/docker/daemon.json
+{
+    "data-root"  : "/data"
+}
+
